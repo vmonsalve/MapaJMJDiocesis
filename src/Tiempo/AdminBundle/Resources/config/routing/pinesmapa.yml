@@ -1,0 +1,22 @@
+administrator_pinesmapa_index:
+    path:     /
+    defaults: { _controller: "TiempoAdminBundle:pinesMapa:index" }
+    methods:  GET
+
+administrator_pinesmapa_new:
+    path:     /new
+    defaults: { _controller: "TiempoAdminBundle:pinesMapa:new" }
+    methods:  [GET, POST]
+
+administrator_pinesmapa_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "TiempoAdminBundle:pinesMapa:edit" }
+    methods:  [GET, POST]
+
+administrator_pinesmapa_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "TiempoAdminBundle:pinesMapa:delete" }
+
+administrator_pinesmapa_pinesGrid:
+    path: /pinesGrid
+    defaults: {_controller: TiempoAdminBundle:pinesMapa:pinesGrid}

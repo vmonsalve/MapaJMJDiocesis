@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Localidades JMJ 2018.</title>
+	<link rel="stylesheet" href="{{ asset('bundles/tiempomapas/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{ asset('bundles/tiempomapas/css/bootstrap-grid.min.css')}}">
+	<link rel="stylesheet" href="{{ asset('bundles/tiempomapas/css/bootstrap-reboot.min.css')}}">
+	<style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+</head>
+<body>
+<main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <div class="row">
+            <h1 class="display-3">Título de la web</h1>
+            <img src="{{ asset('bundles/tiempomapas/img/mega-menu-2.png')}}" alt="" style="margin-left: 30px;float: right;height:150px;width:px;">
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+
+			{% block container %}{% endblock %}
+
+        <hr>
+
+      </div> <!-- /container -->
+
+    </main>
+	<script src="{{ asset('bundles/tiempomapas/js/jquery-3.3.1.min.js')}}"></script>
+	<script src="{{ asset('bundles/tiempomapas/js/bootstrap.min.js')}}"></script>
+	<script src="{{ asset('bundles/tiempomapas/js/markerclusterer.js')}}"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeNAkWCa0qhQvIMpWJBkXDZ4gInlUMPFI&libraries=places"></script>        
+
+	{% block js %}{% endblock %}
+</body>
+</html>

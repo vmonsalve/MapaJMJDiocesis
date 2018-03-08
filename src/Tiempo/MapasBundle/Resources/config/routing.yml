@@ -1,0 +1,3 @@
+tiempo_mapas_homepage:
+    path:     /
+    defaults: { _controller: TiempoMapasBundle:Default:index }

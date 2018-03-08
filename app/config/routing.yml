@@ -1,0 +1,11 @@
+tiempo_admin:
+    resource: "@TiempoAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+tiempo_mapas:
+    resource: "@TiempoMapasBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

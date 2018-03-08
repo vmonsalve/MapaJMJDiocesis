@@ -1,0 +1,20 @@
+tiempo_admin_administrator_pinesmapa:
+    resource: "@TiempoAdminBundle/Resources/config/routing/pinesmapa.yml"
+    prefix:   /administrator/pinesmapa
+
+tiempo_admin_homepage:
+    path:     /administrador
+    defaults: { _controller: TiempoAdminBundle:Default:index }
+
+tiempo_admin_login:
+    path: /Login
+    defaults: {_controller: TiempoAdminBundle:Login:login}
+
+tiempo_admin_dashboard:
+    path: /administrator/dashboard
+    defaults: {_controller: TiempoAdminBundle:Default:dashboard}
+
+tiempo_admin_logout:
+    path: /logout
+    defaults: {_controller: TiempoAdminBundle:Default:logout}
+
