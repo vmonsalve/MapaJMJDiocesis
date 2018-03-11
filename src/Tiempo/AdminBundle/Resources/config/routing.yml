@@ -2,6 +2,10 @@ tiempo_admin_administrator_pinesmapa:
     resource: "@TiempoAdminBundle/Resources/config/routing/pinesmapa.yml"
     prefix:   /administrator/pinesmapa
 
+tiempo_admin_administrator_usuarios:
+    resource: "@TiempoAdminBundle/Resources/config/routing/usuarios.yml"
+    prefix:   /administrator/usuarios
+
 tiempo_admin_homepage:
     path:     /administrador
     defaults: { _controller: TiempoAdminBundle:Default:index }

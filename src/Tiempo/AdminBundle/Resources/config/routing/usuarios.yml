@@ -1,0 +1,5 @@
+administrator_usuarios_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "TiempoAdminBundle:Usuarios:edit" }
+    methods:  [GET, POST]
+

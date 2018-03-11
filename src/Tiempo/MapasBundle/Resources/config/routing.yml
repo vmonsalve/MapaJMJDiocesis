@@ -1,3 +1,7 @@
 tiempo_mapas_homepage:
     path:     /
     defaults: { _controller: TiempoMapasBundle:Default:index }
+
+tiempo_mapas_pin:
+    path: /{id}/pin
+    defaults: {_controller: TiempoMapasBundle:Default:pin}

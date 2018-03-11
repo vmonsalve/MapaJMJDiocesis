@@ -35,6 +35,7 @@ class pinesMapaController extends Controller
                             "Descripción"  => 'p.descripcion',
                             "Latitud"      => 'p.latitud',
                             "Longitud"     => 'p.latitud',
+                            'ver'          => 'p.id',
                             "Editar"       => 'p.id',
                             "Eliminar"     => 'p.id',
                             "_identifier_" => 'p.id'
@@ -43,6 +44,14 @@ class pinesMapaController extends Controller
                 ->setRenderer(
                     function(&$data) use ($controller_instance){
                       foreach ($data as $key => $value){
+                        if ($key == 5) {
+                          $data[$key] = $controller_instance
+                                      ->get('templating')
+                                      ->render(
+                                          'TiempoAdminBundle:pinesmapa:btnver.html.twig',
+                                          array('value' => $value)
+                                      );
+                        }
                         if ($key == 6) {
                           $data[$key] = $controller_instance
                                       ->get('templating')

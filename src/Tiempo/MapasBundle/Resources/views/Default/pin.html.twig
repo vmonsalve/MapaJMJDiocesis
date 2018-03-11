@@ -1,0 +1,23 @@
+{% extends "TiempoMapasBundle:BASE:base.html.twig" %}
+{% block title %}
+    {{pin.titulo}}
+{% endblock %}
+{% block container %}
+    <div id="pin"></div>
+{% endblock %}
+{% block js %}
+	<script>
+		$(document).ready(function() {
+			var pin = {lat: {{pin.latitud}}, lng: {{pin.longitud}} };
+		    var map = new google.maps.Map(document.getElementById('pin'), {
+		     	zoom: 15,
+		     	center: pin
+		    });
+
+		    var marker = new google.maps.Marker({
+		    	position: pin,
+		    	map: map
+		    });
+		});
+	</script>
+{% endblock %}

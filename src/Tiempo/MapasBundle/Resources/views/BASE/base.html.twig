@@ -2,17 +2,23 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Localidades JMJ 2018.</title>
+	<title>Mapas | {% block title %}{% endblock %}</title>
 	<link rel="stylesheet" href="{{ asset('bundles/tiempomapas/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" href="{{ asset('bundles/tiempomapas/css/bootstrap-grid.min.css')}}">
 	<link rel="stylesheet" href="{{ asset('bundles/tiempomapas/css/bootstrap-reboot.min.css')}}">
 	<style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
       #map {
-        height: 100%;
+          position: relative;
+          width: 100%;
+          height: 100%;
+          padding-bottom: 56.25%;
       }
-      /* Optional: Makes the sample page fill the window. */
+      #pin{
+          position: relative;
+          width: 100%;
+          height: 100%;
+          padding-bottom: 56.25%;
+      }
       html, body {
         height: 100%;
         margin: 0;
@@ -21,28 +27,10 @@
     </style>
 </head>
 <body>
-<main role="main">
 
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <div class="container">
-          <div class="row">
-            <h1 class="display-3">Título de la web</h1>
-            <img src="{{ asset('bundles/tiempomapas/img/mega-menu-2.png')}}" alt="" style="margin-left: 30px;float: right;height:150px;width:px;">
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <!-- Example row of columns -->
-
+      <div class="container-fluid">
 			{% block container %}{% endblock %}
-
-        <hr>
-
-      </div> <!-- /container -->
-
-    </main>
+      </div>
 	<script src="{{ asset('bundles/tiempomapas/js/jquery-3.3.1.min.js')}}"></script>
 	<script src="{{ asset('bundles/tiempomapas/js/bootstrap.min.js')}}"></script>
 	<script src="{{ asset('bundles/tiempomapas/js/markerclusterer.js')}}"></script>
