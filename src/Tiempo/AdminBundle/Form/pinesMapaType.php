@@ -7,6 +7,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\UrlType;
 
 
 class pinesMapaType extends AbstractType
@@ -18,6 +19,10 @@ class pinesMapaType extends AbstractType
     {
         $builder->add('titulo', TextType::class, array(
                     'label' => 'Título',
+                    'attr'  => array('class' => 'form-control')
+                ))
+                ->add('direccion', UrlType::class, array(
+                    'label' => 'Url',
                     'attr'  => array('class' => 'form-control')
                 ))
                 ->add('descripcion', TextareaType::class, array(

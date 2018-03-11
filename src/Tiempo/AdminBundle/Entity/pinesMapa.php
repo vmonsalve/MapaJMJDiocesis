@@ -38,7 +38,7 @@ class pinesMapa
     /**
      * @var string
      *
-     * @ORM\Column(name="descripcion", type="string", length=255, nullable=true)
+     * @ORM\Column(name="descripcion", type="text", length=255, nullable=true)
      */
     private $descripcion;
 
@@ -70,8 +70,7 @@ class pinesMapa
      */
     private $longitud;
 
-
-   
+    
 
     /**
      * Get id

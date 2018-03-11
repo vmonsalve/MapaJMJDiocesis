@@ -14,10 +14,29 @@
 		     	center: pin
 		    });
 
+		    var contentString = '<div id="content">'+
+      		'<div id="siteNotice">'+
+      		'</div>'+
+      		'<h1 id="firstHeading" class="firstHeading">{{pin.titulo}}</h1>'+
+      		'<div id="bodyContent">'+
+      		'<p>{{pin.descripcion|raw}}</p>'+
+      		'<p><a href="{{pin.direccion}}" target="_blank">'+
+      		'{{pin.titulo}}</a></p>'+
+      		'</div>'+
+      		'</div>';
+
+      		var infowindow = new google.maps.InfoWindow({
+    			content: contentString
+  			});
+
 		    var marker = new google.maps.Marker({
 		    	position: pin,
 		    	map: map
 		    });
+
+		    marker.addListener('click', function() {
+    			infowindow.open(map, marker);
+  			});
 		});
 	</script>
 {% endblock %}
